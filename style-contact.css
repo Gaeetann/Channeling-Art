@@ -1,0 +1,143 @@
+@font-face {
+    font-family: 'adobe-clean';
+    src: url(Font/AdobeCleanUXSemiLight.otf);
+}
+
+body {
+    margin: 0px;
+    font-size: 19px;
+    font-family: 'adobe-clean';
+}
+
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    height: 15vh;
+    width: 100%;
+    box-shadow: 10px 5px 5px gray;
+}
+
+.font {
+    font-weight: normal;
+}
+
+.logo {
+    margin-left: 10%;
+    width: 20vw;
+    height: 15vh;
+}
+
+h3 {
+    margin-top: 11%;
+    margin-left: 5%;
+    font-size: 16px;
+}
+
+.width-82 {
+    width: 82%;
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 40%;
+}
+
+
+.border-bottom {
+    border-bottom: 2px solid;
+    border-radius: 2px;
+    border-color: rgb(143, 106, 59);
+    margin-bottom: 3%;
+}
+
+.icone {
+    margin-top: 10%;
+    color: rgb(118, 83, 38);
+    margin-left: 10px;
+}
+
+
+.line {
+    margin: 12% 0px 0px 10px;
+    height: 0.01px;
+    border: solid;
+    color: black;
+    width: 10%;
+    border-width: 1px;
+}
+
+.container {
+    margin: 3% 10%;
+}
+
+.bloc {
+    display: flex;
+    flex-direction: row;
+}
+
+.line-work {
+    height: 0.01px;
+    border: solid;
+    color: rgb(101, 100, 100);
+    border-width: 0.01px;
+    width: 80%;
+    margin: 4% 0px 0px 3%;
+}
+
+
+.form {
+    margin: 0px 30%;
+}
+
+label {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 300px;
+    border: transparent;
+    border-bottom: 1px solid;
+    border-color: black;
+    padding-bottom: 5px;
+    color: grey;
+}
+
+.test {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.test2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.bottom {
+    padding-bottom: inherit;
+    padding-bottom: 70px;
+}
+
+
+.btn-5 {
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    border: 1px solid;
+    border-color: rgb(118, 83, 38);
+    margin: 20px 0px 0px 55%;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: 10px 5px 5px grey;
+}
+
+.btn-5:hover {
+    color: rgb(118, 83, 38);
+    background: transparent;
+    box-shadow: none;
+    font-weight: bold;
+}
