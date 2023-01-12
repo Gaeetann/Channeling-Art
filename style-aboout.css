@@ -9,13 +9,40 @@ body {
     font-family: 'adobe-clean';
 }
 
+h3 {
+    margin: auto 0px auto 0px;
+    font-size: 16px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+p {
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.border {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0px auto 0px;
+    width: 75px;
+    text-align: center;
+    padding-top: 13px;
+}
 
 .nav {
     display: flex;
     flex-direction: row;
     height: 15vh;
     width: 100%;
-    box-shadow: 10px 5px 5px gray;
+    box-shadow: 10px 1px 10px rgb(195, 191, 191);
 }
 
 .font {
@@ -28,11 +55,6 @@ body {
     height: 15vh;
 }
 
-h3 {
-    margin-top: 11%;
-    margin-left: 5%;
-    font-size: 16px;
-}
 
 .menu {
     width: 100%;
@@ -45,22 +67,26 @@ h3 {
 .border-bottom {
     border-bottom: 2px solid;
     border-radius: 2px;
-    border-color: rgb(143, 106, 59);
-    margin-bottom: 4%;
+    border-color: #D2BE99;
+    margin: 10px auto 0px auto;
+    width: 25px;
 }
 
 .icone {
-    margin-top: 10%;
-    color: rgb(118, 83, 38);
+    margin: auto 0px auto 0px;
+    color: black;
+}
+
+.margin-10px {
     margin-left: 10px;
 }
 
 
 .line {
-    margin: 13% 0px 0px 10px;
+    margin: auto 11px auto 10px;
     height: 0.01px;
     border: solid;
-    color: black;
+    color: #7A7A7A;
     width: 10%;
     border-width: 1px;
 }
@@ -77,15 +103,15 @@ h3 {
 .line-work {
     height: 0.01px;
     border: solid;
-    color: rgb(101, 100, 100);
+    color: rgb(117, 97, 100);
     border-width: 0.01px;
     width: 80%;
-    margin: 4% 0px 0px 3%;
+    margin: 60px 0px 0px 3%;
 }
 
 img {
-    width: 30vw;
-    height: 50vh;
+    width: 400px;
+    height: 470px;
     margin-left: 25vw;
 }
 
@@ -96,8 +122,155 @@ img {
 }
 
 .presentation {
-    margin-left: -50px;
+    padding-left: 20px;
+    margin-left: -100px;
+    margin-top: 30px;
     width: 20%;
     height: 45vh;
     background-color: white;
+    display: block;
+    overflow: scroll;
+}
+
+.menu-burger {
+    display: none;
+}
+
+.icon-mobile {
+    display: none;
+}
+
+
+
+@media (max-width:812px) {
+
+
+
+    .nav {
+        flex-direction: row-reverse;
+
+        flex-grow: 1;
+    }
+
+    .icon-mobile {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        margin: 10px 10px 0px 0px
+    }
+
+    .icone {
+        color: #D2BE99;
+    }
+
+    .logo {
+        margin: auto auto;
+        width: 40%;
+        height: 100%;
+        padding-left: 10%;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    #openBtn {
+        left: 10px;
+        top: 40px;
+        position: fixed;
+        color: #D2BE99;
+    }
+
+    .menu-burger {
+        display: block;
+        height: 100%;
+        width: 250px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: -250px;
+        background-color: #e8e8e8;
+        padding-top: 60px;
+        transition: left 0.5s ease;
+    }
+
+    .menu-burger a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .menu-burger a:hover {
+        color: #D2BE99;
+    }
+
+    .menu-burger ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        color: #D2BE99;
+    }
+
+    .menu-burger.active {
+        left: 0;
+    }
+
+    .menu-burger .close {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+    }
+
+    .burger-icon span {
+        display: block;
+        width: 35px;
+        height: 5px;
+        background-color: #D2BE99;
+        margin: 6px 0;
+    }
+
+    .line-work {
+        margin-top: 62px;
+    }
+
+    img {
+        margin-left: 50px;
+    }
+
+    .presentation {
+        width: 50%;
+    }
+
+    @media (max-width:500px) {
+        .logo {
+            margin: auto auto;
+            width: 50%;
+            height: 90%;
+            padding-left: 10%;
+        }
+
+        .structure {
+            flex-direction: column;
+        }
+
+        img {
+            height: 350 px;
+            width: 85%;
+            margin-left: 25px;
+        }
+
+        #openBtn {
+            position: inherit;
+            margin: auto 0px auto 10px;
+        }
+
+        .presentation {
+            margin: auto;
+            width: 80%;
+        }
+    }
 }

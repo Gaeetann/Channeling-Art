@@ -1,18 +1,16 @@
-$(function () {
+let progress = document.getElementById('data');
+let data = document.getElementById('data');
 
-    var interval = setInterval(increment, 100);
-    var current = 0;
 
-    function increment() {
-        current++;
-        $('#counter').html(current + '%');
-        if (current == 100) { current = 0; }
+
+let timer = setInterval(function () {
+    let percentage = parseInt(progress.getAttribute('data-progress').replace('%', ''));
+    percentage += 1;
+    progress.setAttribute('data-progress', percentage + "  %");
+    document.documentElement.style.setProperty('--progress', percentage + "%");
+    console.log(percentage);
+    if (percentage >= 100) {
+        progress.setAttribute('data-progress', "100%");
+        clearInterval(timer);
     }
-
-    $('.load-bar').mouseover(function () {
-        clearInterval(interval);
-    }).mouseout(function () {
-        interval = setInterval(increment, 100);
-    });
-
-});
+}, 30);

@@ -9,13 +9,26 @@ body {
     font-family: 'adobe-clean';
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.border {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0px auto 2%;
+    width: 75px;
+    text-align: center;
+    padding-top: 13px;
+}
 
 .nav {
     display: flex;
     flex-direction: row;
     height: 15vh;
     width: 100%;
-    box-shadow: 10px 5px 5px gray;
+    box-shadow: 10px 1px 10px rgb(195, 191, 191)
 }
 
 .font {
@@ -29,8 +42,7 @@ body {
 }
 
 h3 {
-    margin-top: 11%;
-    margin-left: 5%;
+    margin: auto 0px auto 3%;
     font-size: 16px;
 }
 
@@ -49,22 +61,26 @@ h3 {
 .border-bottom {
     border-bottom: 2px solid;
     border-radius: 2px;
-    border-color: rgb(143, 106, 59);
-    margin-bottom: 3%;
+    border-color: #C3A776;
+    margin: 10px auto 0px auto;
+    width: 25px;
 }
 
 .icone {
-    margin-top: 10%;
-    color: rgb(118, 83, 38);
+    margin: auto 0px auto 0px;
+    color: black;
+}
+
+.margin-10px {
     margin-left: 10px;
 }
 
 
 .line {
-    margin: 12% 0px 0px 10px;
+    margin: auto 11px auto 10px;
     height: 0.01px;
     border: solid;
-    color: black;
+    color: rgb(117, 97, 100);
     width: 10%;
     border-width: 1px;
 }
@@ -81,7 +97,7 @@ h3 {
 .line-work {
     height: 0.01px;
     border: solid;
-    color: rgb(101, 100, 100);
+    color: rgb(117, 97, 100);
     border-width: 0.01px;
     width: 80%;
     margin: 4% 0px 0px 3%;
@@ -122,22 +138,169 @@ input {
     padding-bottom: 70px;
 }
 
+.required {
+    margin-left: 12px;
+    font-weight: bold;
+    font-size: 15px;
+}
 
-.btn-5 {
-    width: 130px;
+
+.btn {
+    width: 160px;
     height: 40px;
     line-height: 42px;
     border: 1px solid;
     border-color: rgb(118, 83, 38);
-    margin: 20px 0px 0px 55%;
+    color: #C3A776;
+    margin: 40px 0px 0px 55%;
     padding: 0;
     background-color: transparent;
-    box-shadow: 10px 5px 5px grey;
+    box-shadow: 2px 2px 1px rgb(118, 83, 38);
 }
 
-.btn-5:hover {
-    color: rgb(118, 83, 38);
-    background: transparent;
+.btn:hover {
+    color: #C3A776;
+    background: rgb(112, 97, 78);
     box-shadow: none;
     font-weight: bold;
+    box-shadow: 2px 2px 1px white;
+
+}
+
+.menu-burger {
+    display: none;
+}
+
+.icon-mobile {
+    display: none;
+}
+
+
+@media (max-width:812px) {
+
+
+
+
+    .nav {
+        flex-direction: row-reverse;
+        position: ab;
+        flex-grow: 1;
+    }
+
+    .icon-mobile {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        margin: 10px 10px 0px 0px
+    }
+
+    .icone {
+        color: #D2BE99;
+    }
+
+    .logo {
+        margin: auto auto;
+        width: 40%;
+        height: 100%;
+        padding-left: 10%;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    #openBtn {
+        left: 10px;
+        top: 40px;
+        position: fixed;
+        color: #D2BE99;
+    }
+
+    .menu-burger {
+        display: block;
+        height: 100%;
+        width: 250px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: -250px;
+        background-color: #e8e8e8;
+        padding-top: 60px;
+        transition: left 0.5s ease;
+    }
+
+    .menu-burger a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .menu-burger a:hover {
+        color: #D2BE99;
+    }
+
+    .menu-burger ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        color: #D2BE99;
+    }
+
+    .menu-burger.active {
+        left: 0;
+    }
+
+    .menu-burger .close {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+    }
+
+    .burger-icon span {
+        display: block;
+        width: 35px;
+        height: 5px;
+        background-color: #D2BE99;
+        margin: 6px 0;
+    }
+
+    .container {
+        margin-left: 15px;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        margin-left: 15px;
+    }
+
+    .test2 {
+        flex-direction: column;
+    }
+
+    .test {
+        flex-direction: column;
+    }
+
+    .btn {
+        margin-left: 30%;
+    }
+
+    .line-work {
+        margin-top: 60px;
+    }
+
+    @media (max-width:500px) {
+        .logo {
+            margin: auto auto;
+            width: 50%;
+            height: 90%;
+            padding-left: 10%;
+        }
+    }
+
 }

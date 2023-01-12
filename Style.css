@@ -12,8 +12,7 @@ body {
 }
 
 h3 {
-    margin-top: 11%;
-    margin-left: 5%;
+    margin: auto 0px auto 3%;
     font-size: 16px;
 }
 
@@ -22,7 +21,14 @@ a {
     color: inherit;
 }
 
-
+.border {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0px auto 2%;
+    width: 75px;
+    text-align: center;
+    padding-top: 13px;
+}
 
 .font {
     font-weight: normal;
@@ -31,7 +37,7 @@ a {
 .line-work {
     height: 0.01px;
     border: solid;
-    color: rgb(101, 100, 100);
+    color: rgb(117, 97, 100);
     border-width: 0.01px;
     width: 80%;
     margin: 4% 0px 0px 3%;
@@ -40,23 +46,27 @@ a {
 .border-bottom {
     border-bottom: 2px solid;
     border-radius: 2px;
-    border-color: rgb(143, 106, 59);
-    margin-bottom: 4%;
+    border-color: #C3A776;
+    margin: 10px auto 0px auto;
+    width: 25px;
 }
 
 
 .icone {
-    margin-top: 10%;
-    color: rgb(118, 83, 38);
+    margin: auto 0px auto 0px;
+    color: #756153;
+}
+
+.margin-10px {
     margin-left: 10px;
 }
 
 
 .line {
-    margin: 13% 0px 0px 10px;
+    margin: auto 11px auto 10px;
     height: 0.01px;
     border: solid;
-    color: black;
+    color: rgb(117, 97, 100);
     width: 10%;
     border-width: 1px;
 }
@@ -66,7 +76,7 @@ a {
     flex-direction: row;
     height: 15vh;
     width: 100%;
-    box-shadow: 10px 5px 5px gray;
+    box-shadow: 10px 1px 10px rgb(195, 191, 191)
 }
 
 .logo {
@@ -113,13 +123,274 @@ a {
 
 .galerie {
     margin-top: 5%;
-    width: 100%;
+    width: 85%;
     max-height: 500px;
     display: block;
     overflow: scroll;
 }
 
 .picture {
-    width: 20vw;
-    height: 30vh;
+    max-width: 15vw;
+    max-height: 30vh;
+}
+
+.menu-burger {
+    display: none;
+}
+
+.icon-mobile {
+    display: none;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+.menu-deroulant {
+    display: none;
+}
+
+
+@media (max-width:812px) {
+
+    .collection {
+        display: none;
+    }
+
+    .menu-deroulant {
+        display: block;
+    }
+
+    :root {
+        --hauteur-menu: 60px;
+    }
+
+    * {
+        margin: 0px;
+        padding: 0px;
+        font-family: Montserrat, sans-serif;
+    }
+
+    nav {
+        width: 150px;
+        font-size: 18px;
+        position: sticky;
+        top: 0px;
+        margin-top: 40px;
+    }
+
+    nav>ul {
+        display: flex;
+        text-align: center;
+        box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+        height: var(--hauteur-menu);
+    }
+
+    nav ul {
+        list-style-type: none;
+    }
+
+    nav>ul>li {
+        background-color: white;
+        position: relative;
+        height: 100%;
+        flex: 1;
+    }
+
+    nav>ul>li:hover>a {
+        color: #2169EC;
+    }
+
+    nav>ul>li>a {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    li a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .menu-deroulant>a:after {
+        content: '❯';
+        font-size: 15px;
+        margin-left: 7px;
+        display: inline-block;
+    }
+
+    .menu-deroulant:hover>a:after {
+        animation: rotationFleche 0.2s linear forwards;
+    }
+
+    @keyframes rotationFleche {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        50% {
+            transform: rotate(45deg);
+        }
+
+        100% {
+            transform: rotate(90deg);
+        }
+    }
+
+    .sous-menu {
+        margin-top: var(--hauteur-menu);
+        width: 100%;
+        text-align: left;
+        overflow: hidden;
+        max-height: 0;
+        border-radius: 2px;
+        background-color: white;
+    }
+
+    .menu-deroulant:hover>.sous-menu {
+        animation: apparitionSousMenu 1s forwards;
+    }
+
+    @keyframes apparitionSousMenu {
+        0% {
+            box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0);
+            border-top: 3px solid #2169EC;
+        }
+
+        30% {
+            box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.3);
+        }
+
+        100% {
+            max-height: 50em;
+            border-top: 3px solid #2169EC;
+            box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    .sous-menu>li:hover {
+        background-color: rgba(33, 105, 236, 0.3);
+    }
+
+    .sous-menu>li>a {
+        align-items: center;
+        display: flex;
+        height: 50px;
+        padding-left: 20px;
+        width: 100%;
+    }
+
+    .sous-menu>li:hover>a {
+        color: white;
+    }
+
+    .nav {
+        flex-direction: row-reverse;
+        position: ab;
+        flex-grow: 1;
+    }
+
+    .icon-mobile {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        margin: 10px 10px 0px 0px
+    }
+
+    .icone {
+        color: #D2BE99;
+    }
+
+    .logo {
+        margin: auto auto;
+        width: 40%;
+        height: 100%;
+        padding-left: 10%;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    #openBtn {
+        left: 10px;
+        top: 40px;
+        position: fixed;
+        color: #D2BE99;
+    }
+
+    .menu-burger {
+        display: block;
+        height: 100%;
+        width: 250px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: -250px;
+        background-color: #e8e8e8;
+        padding-top: 60px;
+        transition: left 0.5s ease;
+    }
+
+    .menu-burger a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .menu-burger a:hover {
+        color: #D2BE99;
+    }
+
+    .menu-burger ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        color: #D2BE99;
+    }
+
+    .menu-burger.active {
+        left: 0;
+    }
+
+    .menu-burger .close {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+    }
+
+    .burger-icon span {
+        display: block;
+        width: 35px;
+        height: 5px;
+        background-color: #D2BE99;
+        margin: 6px 0;
+    }
+
+    .line-work {
+        margin-top: 77px;
+    }
+
+    .picture {
+        min-width: 25vw;
+        min-height: 20vh;
+    }
+
+    .galerie {
+        width: 100%;
+    }
+
+    @media (max-width:500px) {
+        .logo {
+            margin: auto auto;
+            width: 50%;
+            height: 90%;
+            padding-left: 10%;
+        }
+    }
 }
